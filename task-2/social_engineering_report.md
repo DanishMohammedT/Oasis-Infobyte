@@ -1,4 +1,4 @@
-# Research Report — Social Engineering Attacks
+# Research Report - Social Engineering Attacks
 
 **Phishing, Pretexting, Baiting, and related techniques**
 
