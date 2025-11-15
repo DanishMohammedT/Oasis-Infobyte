@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This report surveys three major network security threats — **Denial of Service (DoS/DDoS)**, **Man-in-the-Middle (MITM)** attacks, and **IP-based spoofing** — explaining how they work, their real-world impacts, and practical mitigations. It draws on recent academic surveys and incident reports to provide defendable recommendations for network operators and system administrators.
+This report surveys three major network security threats **Denial of Service (DoS/DDoS)**, **Man-in-the-Middle (MITM)** attacks, and **IP-based spoofing** explaining how they work, their real-world impacts, and practical mitigations. It draws on recent academic surveys and incident reports to provide defendable recommendations for network operators and system administrators.
 
 ## Table of Contents
 
@@ -35,7 +35,7 @@ Network-facing services are exposed to a range of attacks that target availabili
 
 ### 2.1 How it works
 
-A Denial of Service (DoS) attack aims to make a target resource (website, API, network service) unavailable to legitimate users by exhausting resources — bandwidth, compute, connection tables, or application resources. When multiple distributed machines (often botnets) participate it becomes a Distributed DoS (DDoS). Modern DDoS campaigns use volumetric floods, protocol abuses, and application-level requests to overload targets.
+A Denial of Service (DoS) attack aims to make a target resource (website, API, network service) unavailable to legitimate users by exhausting resources bandwidth, compute, connection tables, or application resources. When multiple distributed machines (often botnets) participate it becomes a Distributed DoS (DDoS). Modern DDoS campaigns use volumetric floods, protocol abuses, and application-level requests to overload targets.
 
 ### 2.2 Types & techniques
 
