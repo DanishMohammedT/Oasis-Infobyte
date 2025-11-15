@@ -1,10 +1,8 @@
-#Common Network Security Threats
+##Common Network Security Threats
 
 ## Executive Summary
 
-This report surveys three major network security threats — **Denial of Service (DoS/DDoS)**, **Man-in-the-Middle (MITM)** attacks, and **IP-based spoofing** — explaining how they work, their real-world impacts, and practical mitigations. It draws on recent academic surveys and incident reports to provide defendable recommendations for network operators and system administrators. ([ResearchGate][1])
-
----
+This report surveys three major network security threats — **Denial of Service (DoS/DDoS)**, **Man-in-the-Middle (MITM)** attacks, and **IP-based spoofing** — explaining how they work, their real-world impacts, and practical mitigations. It draws on recent academic surveys and incident reports to provide defendable recommendations for network operators and system administrators.
 
 ## Table of Contents
 
@@ -29,31 +27,27 @@ This report surveys three major network security threats — **Denial of Service
 6. Conclusion
 7. References & Suggested Reading
 
----
-
 ## 1. Introduction:
 
-Network-facing services are exposed to a range of attacks that target availability (DoS/DDoS), confidentiality and integrity (MITM), and identity (spoofing). This report summarizes their mechanisms, impact, examples, and practical mitigations. It synthesizes academic surveys and real incident analyses to give actionable guidance. ([ResearchGate][1])
-
----
+Network-facing services are exposed to a range of attacks that target availability (DoS/DDoS), confidentiality and integrity (MITM), and identity (spoofing). This report summarizes their mechanisms, impact, examples, and practical mitigations. It synthesizes academic surveys and real incident analyses to give actionable guidance.
 
 ## 2. Denial of Service (DoS / DDoS):
 
 ### 2.1 How it works
 
-A Denial of Service (DoS) attack aims to make a target resource (website, API, network service) unavailable to legitimate users by exhausting resources — bandwidth, compute, connection tables, or application resources. When multiple distributed machines (often botnets) participate it becomes a Distributed DoS (DDoS). Modern DDoS campaigns use volumetric floods, protocol abuses, and application-level requests to overload targets. ([ResearchGate][1])
+A Denial of Service (DoS) attack aims to make a target resource (website, API, network service) unavailable to legitimate users by exhausting resources — bandwidth, compute, connection tables, or application resources. When multiple distributed machines (often botnets) participate it becomes a Distributed DoS (DDoS). Modern DDoS campaigns use volumetric floods, protocol abuses, and application-level requests to overload targets.
 
 ### 2.2 Types & techniques
 
 * **Volumetric attacks**: saturate bandwidth (UDP floods, amplification such as memcached/NTP).
 * **Protocol attacks**: exhaust protocol state (SYN floods, TCP connection exhaustion).
 * **Application-layer attacks**: send resource-expensive requests (slowloris, heavy search queries) to overwhelm application logic.
-* **Amplification attacks**: send forged requests to reflectors (DNS, NTP, memcached) that multiply traffic to victims. The 2018 GitHub attack used memcached amplification to produce terabits/second traffic. ([WIRED][2])
+* **Amplification attacks**: send forged requests to reflectors (DNS, NTP, memcached) that multiply traffic to victims. The 2018 GitHub attack used memcached amplification to produce terabits/second traffic.
 
 ### 2.3 Real-world examples
 
-* **GitHub (March 2018)** — Memcached amplification produced ~1.35 Tbps peak traffic; scrubbing via Akamai mitigated the attack. This incident highlights how exposed amplification services on the Internet become force multipliers for DDoS. ([WIRED][2])
-* Numerous IoT/botnet-driven attacks (Mirai family) that leveraged insecure devices to form large attack fleets are covered across DDoS surveys. ([ResearchGate][1])
+* **GitHub (March 2018)** — Memcached amplification produced ~1.35 Tbps peak traffic; scrubbing via Akamai mitigated the attack. This incident highlights how exposed amplification services on the Internet become force multipliers for DDoS.
+* Numerous IoT/botnet-driven attacks (Mirai family) that leveraged insecure devices to form large attack fleets are covered across DDoS surveys.
 
 ### 2.4 Mitigations & best practices
 
@@ -62,7 +56,7 @@ A Denial of Service (DoS) attack aims to make a target resource (website, API, n
 * **Protocol hardening**: disable or rate-limit UDP services that can be abused for amplification (memcached, open DNS recursive).
 * **Capacity & redundancy**: overprovision bandwidth and use multi-CDN / multi-ISP strategies.
 * **Application protections**: WAFs, caching, request throttling and challenge-response (CAPTCHA) for abusive clients.
-* **Anomaly detection / ML**: modern surveys discuss ML methods to detect DDoS patterns, especially in IoT/SDN environments. ([arXiv][3])
+* **Anomaly detection / ML**: modern surveys discuss ML methods to detect DDoS patterns, especially in IoT/SDN environments.
 
 ---
 
@@ -70,7 +64,7 @@ A Denial of Service (DoS) attack aims to make a target resource (website, API, n
 
 ### 3.1 How it works
 
-A MITM attack occurs when an adversary intercepts or relays communications between two parties and can eavesdrop, modify, or inject traffic without the participants’ consent. MITM can be performed via ARP spoofing on LANs, rogue Wi-Fi access points, DNS manipulation, or HTTPS stripping. Attackers can intercept credentials, session cookies, or confidential data. Surveys detail a broad taxonomy and detection approaches. ([Orbit][4])
+A MITM attack occurs when an adversary intercepts or relays communications between two parties and can eavesdrop, modify, or inject traffic without the participants’ consent. MITM can be performed via ARP spoofing on LANs, rogue Wi-Fi access points, DNS manipulation, or HTTPS stripping. Attackers can intercept credentials, session cookies, or confidential data. Surveys detail a broad taxonomy and detection approaches.
 
 ### 3.2 Common MITM variants
 
@@ -78,7 +72,7 @@ A MITM attack occurs when an adversary intercepts or relays communications betwe
 * **DNS spoofing/poisoning**: resolve a domain to attacker IPs to intercept users.
 * **SSL/TLS stripping**: downgrade or remove TLS, forcing plaintext HTTP.
 * **Rogue access points / evil twin**: attacker stands up a Wi-Fi AP that mimics a legitimate network.
-* **Proxy/Middleware insertion**: insertion of a malicious proxy or compromised router. ([Orbit][4])
+* **Proxy/Middleware insertion**: insertion of a malicious proxy or compromised router.
 
 ### 3.3 Detection & mitigation
 
@@ -86,7 +80,7 @@ A MITM attack occurs when an adversary intercepts or relays communications betwe
 * **Mutual authentication**: for sensitive systems, use mutual TLS.
 * **Network hardening**: DHCP/ARP inspection, dynamic ARP inspection (on managed switches), and 802.1X for Wi-Fi.
 * **DNS security**: DNSSEC and DNS over HTTPS/TLS where possible.
-* **Anomaly detection**: monitor ARP table changes, unexpected certificate changes, or abnormal routing. Modern detection research applies traffic analysis and ML for MITM detection. ([MDPI][5])
+* **Anomaly detection**: monitor ARP table changes, unexpected certificate changes, or abnormal routing. Modern detection research applies traffic analysis and ML for MITM detection.
 
 ---
 
@@ -94,19 +88,19 @@ A MITM attack occurs when an adversary intercepts or relays communications betwe
 
 ### 4.1 How IP spoofing works
 
-**IP spoofing** is the forging of the source IP address in packet headers so traffic appears to originate from another host. Spoofing can be used to hide attackers’ origin, to facilitate amplification (by placing victim as reply target), or to bypass simple access controls. Detection of spoofed packets is non-trivial on the open Internet. Research proposes techniques such as hop-count verification (TTL/hop-count based filters) and packet attribute analysis for detection. ([PMC][6])
+**IP spoofing** is the forging of the source IP address in packet headers so traffic appears to originate from another host. Spoofing can be used to hide attackers’ origin, to facilitate amplification (by placing victim as reply target), or to bypass simple access controls. Detection of spoofed packets is non-trivial on the open Internet. Research proposes techniques such as hop-count verification (TTL/hop-count based filters) and packet attribute analysis for detection.
 
 ### 4.2 Role in DDoS and other attacks
 
 * **Reflection/amplification**: Spoofed source addresses allow reflected replies to be sent to victims (amplification).
 * **Session hijacking & spoofed admin access**: Spoofing is foundational for impersonation attacks aiming to trick services or session logic.
-* **Network instability**: spoofed routing information can misdirect traffic or disturb routing tables. ([ResearchGate][1])
+* **Network instability**: spoofed routing information can misdirect traffic or disturb routing tables.
 
 ### 4.3 Detection & defenses
 
 * **Ingress/Egress filtering (BCP 38 / RFC 2827)**: ISPs and enterprise borders should drop packets with invalid source addresses that should not originate from connected networks. Widespread deployment reduces spoofing feasibility.
 * **Hop-count / TTL verification (Unicast Reverse Path Forwarding, uRPF)**: check whether the incoming packet’s route is consistent with its source.
-* **Anomaly detection**: statistical analysis of packet attributes to detect spoofed flows. Academic surveys compare methods and recommend multi-layer defenses. ([IJERT][7])
+* **Anomaly detection**: statistical analysis of packet attributes to detect spoofed flows. Academic surveys compare methods and recommend multi-layer defenses.
 
 ---
 
@@ -124,7 +118,7 @@ A MITM attack occurs when an adversary intercepts or relays communications betwe
 
 ## 6. Conclusion:
 
-DoS/DDoS, MITM, and IP spoofing remain among the most impactful network threats today. Effective defense requires **layered measures**: protocol hardening, perimeter filtering, encryption, detection, and operational readiness. Recent research emphasizes automated detection (ML) and SDN-centric defenses, but practical steps like ingress filtering, TLS enforcement, and DDoS scrubbing are immediate and necessary actions. ([arXiv][3])
+DoS/DDoS, MITM, and IP spoofing remain among the most impactful network threats today. Effective defense requires **layered measures**: protocol hardening, perimeter filtering, encryption, detection, and operational readiness. Recent research emphasizes automated detection (ML) and SDN-centric defenses, but practical steps like ingress filtering, TLS enforcement, and DDoS scrubbing are immediate and necessary actions.
 
 ---
 
