@@ -67,7 +67,7 @@ Baiting offers something tempting (free software, a USB drive labeled “Confide
 
 ### 2.4 Quid Pro Quo & Tailgating
 
-* **Quid Pro Quo**: attacker offers a service or benefit in exchange for access or information (e.g., “I’ll run a quick diagnostic if you run this tool” — which is actually malware).
+* **Quid Pro Quo**: attacker offers a service or benefit in exchange for access or information (e.g., “I’ll run a quick diagnostic if you run this tool” which is actually malware).
 * **Tailgating / Piggybacking**: attackers follow authorized personnel into secured areas, bypassing physical access controls.
 
 ### 2.5 Business Email Compromise (BEC) / CEO Fraud
