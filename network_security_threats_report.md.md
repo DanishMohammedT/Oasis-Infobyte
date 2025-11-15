@@ -46,7 +46,7 @@ A Denial of Service (DoS) attack aims to make a target resource (website, API, n
 
 ### 2.3 Real-world examples
 
-* **GitHub (March 2018)** — Memcached amplification produced ~1.35 Tbps peak traffic; scrubbing via Akamai mitigated the attack. This incident highlights how exposed amplification services on the Internet become force multipliers for DDoS.
+* **GitHub (March 2018):** Memcached amplification produced ~1.35 Tbps peak traffic; scrubbing via Akamai mitigated the attack. This incident highlights how exposed amplification services on the Internet become force multipliers for DDoS.
 * Numerous IoT/botnet-driven attacks (Mirai family) that leveraged insecure devices to form large attack fleets are covered across DDoS surveys.
 
 ### 2.4 Mitigations & best practices
