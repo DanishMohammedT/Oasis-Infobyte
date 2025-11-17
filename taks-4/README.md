@@ -1,12 +1,12 @@
 
-# 🛰️ **Basic Network Scanning Using Nmap**
+#  **Basic Network Scanning Using Nmap**
 
 This project demonstrates a simple network scan performed using **Nmap** on Windows to identify open ports, running services, and their significance.
 It is part of the *Basic Network Scanning* learning task.
 
 ---
 
-## 📌 **Objective**
+##  **Objective**
 
 * Install and run Nmap
 * Perform a scan on a local machine
@@ -16,19 +16,19 @@ It is part of the *Basic Network Scanning* learning task.
 
 ---
 
-## 🛠️ **Tools Used**
+##  **Tools Used**
 
 * **Nmap** (Windows version)
 
 ---
 
-## 🖥️ **Scan Command Used**
+##  **Scan Command Used**
 
 ```bash
 nmap TARGET
 ```
 
-# 📄 **Scan Results**
+#  **Scan Results**
 
 Raw scan output (also stored in `nmap_scan_results.txt`):
 
@@ -45,7 +45,7 @@ PORT     STATE SERVICE
 
 ---
 
-# 🧠 **Explanation of Each Open Port**
+#  **Explanation of Each Open Port**
 
 ### **135/tcp — msrpc**
 
@@ -98,7 +98,7 @@ PORT     STATE SERVICE
 
 ---
 
-# 📁 **Project Deliverables**
+#  **Project Deliverables**
 
 | File                      | Description                              |
 | ------------------------- | ---------------------------------------- |
@@ -108,7 +108,7 @@ PORT     STATE SERVICE
 
 ---
 
-# ✅ **Conclusion**
+#  **Conclusion**
 
 This activity provided hands-on experience with:
 
