@@ -25,7 +25,7 @@ It is part of the *Basic Network Scanning* learning task.
 ## 🖥️ **Scan Command Used**
 
 ```bash
-nmap -sV TARGET
+nmap TARGET
 ```
 
 # 📄 **Scan Results**
