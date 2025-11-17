@@ -28,15 +28,6 @@ It is part of the *Basic Network Scanning* learning task.
 nmap -sV TARGET
 ```
 
-> Note: `TARGET` is a custom hostname mapped to an IP using **C:\Windows\System32\drivers\etc\hosts**
-> Example:
->
-> ```
-> 192.168.1.10    TARGET
-> ```
-
----
-
 # 📄 **Scan Results**
 
 Raw scan output (also stored in `nmap_scan_results.txt`):
