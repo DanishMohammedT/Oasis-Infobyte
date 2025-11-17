@@ -1,17 +1,17 @@
 
 
-Starting Nmap 7.98 ( https://nmap.org ) at 2025-11-17 14:11 +0530
-Nmap scan report for 192.168.1.2
-Host is up (0.00043s latency).
-Not shown: 993 closed tcp ports (reset)
-PORT     STATE SERVICE
-135/tcp  open  msrpc
-139/tcp  open  netbios-ssn
-445/tcp  open  microsoft-ds
-902/tcp  open  iss-realsecure
-912/tcp  open  apex-mesh
-2179/tcp open  vmrdp
-5357/tcp open  wsdapi
+Starting Nmap 7.98 ( https://nmap.org ) at 2025-11-17 14:11 +0530 <br>
+Nmap scan report for 192.168.1.2 <br>
+Host is up (0.00043s latency). <br>
+Not shown: 993 closed tcp ports (reset) <br>
+PORT     STATE SERVICE <br>
+135/tcp  open  msrpc <br>
+139/tcp  open  netbios-ssn <br>
+445/tcp  open  microsoft-ds <br>
+902/tcp  open  iss-realsecure <br>
+912/tcp  open  apex-mesh <br>
+2179/tcp open  vmrdp <br>
+5357/tcp open  wsdapi <br>
 
 
 Explanation of Open Ports
