@@ -119,3 +119,5 @@ This activity provided hands-on experience with:
 
 This is the foundation for further network security analysis.
 
+<img width="1347" height="595" alt="cmd_G7rCaXJCRR" src="https://github.com/user-attachments/assets/cd64d661-19a6-4d90-9f03-c18671510e9c" />
+
